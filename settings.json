@@ -1,0 +1,6 @@
+{
+    "theme": "dark",
+    "output_folder": "output",
+    "auto_open_excel": true,
+    "save_logs": true
+}

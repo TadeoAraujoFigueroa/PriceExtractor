@@ -4,11 +4,11 @@ Sprint -1
 
 Sprint 0
 
-□ Crear proyecto
+✔ Crear proyecto
 
-□ Git
+✔ Git
 
-□ Entorno virtual
+✔ Entorno virtual
 
 Sprint 1
 

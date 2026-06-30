@@ -1,16 +1,19 @@
-from ..providers.alpina.extractor import AlpinaExtractor
+from providers.alpina.extractor import AlpinaExtractor
 class RegistryExtractor:
 
-    extractorList = [AlpinaExtractor]
+    extractorList = [
+         AlpinaExtractor
+    ]
 
     @classmethod
-    def define_extractor(cls, texto):
+    def define_extractor(cls, texto):         
+            for extractor in cls.extractorList:
+                 print(f"[REGISTRY] Probando {extractor.NAME}")
+                 print(extractor.KEYWORDS);
 
-        for extractor in extractorList:
-
-            if extractor.matches(texto):
-
-                return extractor();
+                 if extractor.matches(texto):
+                      print(f"[REGISTRY] Coincidencia encontrada: {extractor.NAME}")
+                      return extractor();
 
 
 

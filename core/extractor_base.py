@@ -1,4 +1,6 @@
-class BaseExtractor:
+from abc import ABC, abstractmethod
+
+class BaseExtractor(ABC):
 
     NAME = "";
 
@@ -13,5 +15,6 @@ class BaseExtractor:
             for keyword in cls.KEYWORDS
         )
     
+    @abstractmethod
     def extract(self, pdf_path):
         raise NotImplementedError()

@@ -12,7 +12,7 @@ Sprint 0
 
 Sprint 1
 
-□ Motor PDF
+✔ Motor PDF
 
 Sprint 2
 

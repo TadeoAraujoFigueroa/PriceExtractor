@@ -16,3 +16,8 @@ Luego de las correcciones pertinentes, el programa realiza todos los objetivos p
 La problemática principal erradicó en cómo resolver la lectura del documento y la extracción de los datos pertinentes. Ambas cuestiones se resolvieron primero integrando una clase encargada de las acciones a realizar sobre el PDF (lectura) y luego, dentro del extractor correspondiente, desarrollando expresiones regulares que permitan extraer los datos buscados.
 Para el próximo sprint se buscará ampliar el número de proveedores para realizar extracciones sobre distintos documentos y adaptar cada proceso al formato de los mismos.
 
+***Sprint 2 Review***
+Fue agregado un nuevo proveedor con un formato de lista de precio diferente. Se realizó la modificación del código de extracción para el mismo, actualizando e incorporando expresiones regulares más robustas con el fin de evitar errores en la obtención de datos. 
+Posteriormente, se desarrolló la extracción dinámica de proveedores existentes dentro de la clase RegistryExtractor a partir de los módulos pertenecientes al paquete 'providers'. Está funcionalidad es clave ya que nos desliga de la idea de registrar nuevos proveedores cada vez que sea necesario agregar uno nuevo.
+Las dificultades principales erradicaron en como utilizar las librerías pkgutil, importlib e inspect para realizar el recorrido por el paquete providers, identificar sus modulos y dentro de los mismos sus clases, para, a partir de ahí, agregarlas al registro de proveedores.
+Para el próximo Sprint se cargará una cantidad mayor de proveedores, adaptando los códigos de extracción de cada uno, con el fin de cubrir la demanda de extracción de costos existente.

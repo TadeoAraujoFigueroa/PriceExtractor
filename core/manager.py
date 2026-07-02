@@ -9,17 +9,11 @@ class Manager:
     @classmethod
     def process(cls, pdf_path):
 
-        print("[MANAGER] Iniciando proceso");
-
         pdfDocument = PDFDocument(pdf_path);
-
-        print("[MANAGER] Detectando proveedor...");
 
         #acá recibe la instancia del extractor determinado por el PDF
         extractor = FirstDetector.detect(pdfDocument.firstPage);
 
-        print(f"[MANAGER] Proveedor detectado: {extractor.NAME}")
-        
         #acá recibe los datos extraídos en formato JSON
         resultado = extractor.extract(pdfDocument);
         #acá exporta los datos a un Excel listo para su importación al sistema determinado

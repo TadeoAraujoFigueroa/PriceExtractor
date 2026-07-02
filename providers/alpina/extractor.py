@@ -14,7 +14,7 @@ class AlpinaExtractor(BaseExtractor):
     #extraído del PDF
     def extract(self, pdf):
 
-        print("[ALPINA] Extrayendo productos...")
+
 
         texto = pdf.allText;
 
@@ -30,20 +30,24 @@ class AlpinaExtractor(BaseExtractor):
             # último número = precio
 
             numeros = self.__obtener_numeros(linea);
-
+            
             if len(numeros) >= 2:
 
                 codigo = numeros[0]
                 precio = numeros[-1]
-
+        
                 # evitar líneas basura
                 if len(codigo) <= 5 and len(precio) >= 3:
 
                     self.__datos.append({
                         "codigo": codigo,
-                        "precio": precio
+                        "precio": precio,
+
                     })
-        print(f"[ALPINA] {len(self.__datos)} productos encontrados.")
+
         return self.__datos
+
     def __obtener_numeros(self, linea):
         return re.findall(r"\d+", linea);
+    
+   

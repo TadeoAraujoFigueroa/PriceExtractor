@@ -16,7 +16,7 @@ Sprint 1
 
 Sprint 2
 
-□ JSON
+✔ Registro dinámico de proveedores
 
 Sprint 3
 

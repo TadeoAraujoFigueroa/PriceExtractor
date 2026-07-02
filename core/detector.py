@@ -8,6 +8,6 @@ class FirstDetector:
     #para que corrobore a quien le pertenece
     @classmethod
     def detect(cls, texto): 
-         print("[DETECTOR] Analizando primera página...")
+
          return RegistryExtractor.define_extractor(texto);
 

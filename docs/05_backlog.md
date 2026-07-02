@@ -11,3 +11,9 @@ v0.2.0
 - Corrección de errores de lógica y sintáxis
 - Extracción de datos del PDF para un único proveedor determinado 
 - Exportación de los datos a un archivo Excel
+------
+v0.3.0
+------
+- Registro dinámico de proveedores existentes
+- Extracción de datos varios para dos proveedores distintos a partir de sus listas en formato PDF
+- Expresiones regulares robustas para una extracción de información eficiente

@@ -14,6 +14,8 @@ class Manager:
         #acá recibe la instancia del extractor determinado por el PDF
         extractor = FirstDetector.detect(pdfDocument.firstPage);
 
+        print(f"Se ha determinado que el extractor a utilizar es: {extractor.NAME}");
+        
         #acá recibe los datos extraídos en formato JSON
         resultado = extractor.extract(pdfDocument);
         #acá exporta los datos a un Excel listo para su importación al sistema determinado

@@ -6,15 +6,13 @@ class AlpinaExtractor(BaseExtractor):
     
     NAME = "ALPINA";
 
-    KEYWORDS = ["ALPINA", "Lista de Precios", "LISTA: VIP"];
+    KEYWORDS = ["ALPINA", "LISTA: VIP"];
 
     __datos = []
 
     #Esta función se encarga de obtener los datos pertinentes a partir del texto
     #extraído del PDF
     def extract(self, pdf):
-
-
 
         texto = pdf.allText;
 
@@ -23,8 +21,7 @@ class AlpinaExtractor(BaseExtractor):
         for linea in lineas:
 
             linea = linea.strip()
-            print(repr(linea));
-         
+   
             # Buscar:
             # primer número = código
             # último número = precio
@@ -42,7 +39,6 @@ class AlpinaExtractor(BaseExtractor):
                     self.__datos.append({
                         "codigo": codigo,
                         "precio": precio,
-
                     })
 
         return self.__datos

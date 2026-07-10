@@ -15,5 +15,5 @@ v0.2.0
 v0.3.0
 ------
 - Registro dinámico de proveedores existentes
-- Extracción de datos varios para dos proveedores distintos a partir de sus listas en formato PDF
+- Extracción de datos varios para múltiples proveedores distintos a partir de sus listas en formato PDF
 - Expresiones regulares robustas para una extracción de información eficiente
